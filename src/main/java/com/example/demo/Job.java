@@ -12,6 +12,7 @@ public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     @NotNull
     @Size(min=4)
     private String title;
@@ -21,7 +22,7 @@ public class Job {
     private String employer;
 
     @NotNull
-    @Size
+    @Size(min=10)
     private String description;
 
     public long getId() {

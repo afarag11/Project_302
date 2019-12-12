@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,7 +18,7 @@ public class HomeController {
     @RequestMapping("/")
     public String listJobs(Model model){
         model.addAttribute("jobs", jobRepository.findAll());
-        return "jobform";
+        return "list";
     }
     @GetMapping("/add")
     public String jobForm(Model model){
